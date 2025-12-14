@@ -14,7 +14,7 @@ import { NotificationsModule } from './notifications/notifications.module';
     MongooseModule.forRoot(
       process.env.MONGO_URL || 
       process.env.MONGODB_URI || 
-      'mongodb://localhost:27017/restaurantdb'
+      'mongodb+srv://zezosaied2_db_user:UJKXKT3ddqkdOlr6@resturantdb.kgjj57v.mongodb.net/restaurantdb?retryWrites=true&w=majority'
     ), 
     UsersModule, 
     MenuModule, 
