@@ -6,7 +6,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // إضافة prefix /api لكل الـ routes (مهم عشان الـ Frontend يعرف ينادي صح)
-  app.setGlobalPrefix('api');
 
   // CORS – مهم جدًا مع الـ Auth (خاصة لو بتستخدم credentials/cookies)
 app.enableCors({
