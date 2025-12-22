@@ -17,6 +17,7 @@ async function bootstrap() {
       'https://restaurant-react-git-main-ziads-projects-024dd1bb.vercel.app',
       'https://ziadsaid2-restaurant-react-ic2fwyb6s-ziads-projects-024dd1bb.vercel.app',
       'https://ziadsaid2-restaurant-react.vercel.app',
+      /.*\.vercel\.app$/,
     ],
     credentials: true,  // لازم true لو بتستخدم JWT في cookies أو withCredentials
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
