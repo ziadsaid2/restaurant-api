@@ -9,20 +9,10 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   // CORS – مهم جدًا مع الـ Auth (خاصة لو بتستخدم credentials/cookies)
-  app.enableCors({
-    origin: [
-      'http://localhost:3000',  // للتطوير محليًا (Next.js)
-      'http://localhost:5173',  // لو فيه port تاني
-      'https://restaurant-react.vercel.app',
-      'https://restaurant-react-git-main-ziads-projects-024dd1bb.vercel.app',
-      'https://ziadsaid2-restaurant-react-ic2fwyb6s-ziads-projects-024dd1bb.vercel.app',
-      'https://ziadsaid2-restaurant-react.vercel.app',
-      /.*\.vercel\.app$/,
-    ],
-    credentials: true,  // لازم true لو بتستخدم JWT في cookies أو withCredentials
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  });
+app.enableCors({
+  origin: true,  // يقبل من أي origin (كل المواقع)
+  credentials: true,
+});
 
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,
